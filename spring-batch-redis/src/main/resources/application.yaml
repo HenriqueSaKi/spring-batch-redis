@@ -1,0 +1,16 @@
+server:
+  port: ${server_port}
+  servlet:
+    context-path: /api/v1
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=MS_JOB_REGISTRATION;encrypt=false;trustServerCertificate=true
+    username: ${datasource_username}
+    password: ${datasource_password}
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate:
+      ddl-auto: update
