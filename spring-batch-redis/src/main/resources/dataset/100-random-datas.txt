@@ -1,0 +1,101 @@
+id;name;birthday;graduation;university
+1;Emily Johnson;1989-07-20;Computer Science;University of X
+2;Daniel Williams;1994-04-12;Engineering;College of Y
+3;Olivia Brown;1990-11-30;Biology;Institute of Z
+4;James Smith;1993-09-08;Psychology;School of A
+5;Sophia Miller;1991-12-25;Mathematics;University of B
+6;Alexander Davis;1988-05-18;Chemistry;College of C
+7;Ava Wilson;1995-02-14;Economics;Institute of D
+8;Logan Martin;1992-10-06;History;School of E
+9;Mia Anderson;1996-08-03;Sociology;University of F
+10;Noah Taylor;1990-03-28;Physics;College of G
+11;Isabella Martinez;1987-06-21;Political Science;Institute of H
+12;William Garcia;1994-01-17;English Literature;School of I
+13;Emma Rodriguez;1991-09-11;Anthropology;University of J
+14;Sophia Hernandez;1989-04-05;Business Administration;College of K
+15;James Moore;1992-12-02;Fine Arts;Institute of L
+16;Amelia Lopez;1995-07-24;Geology;School of M
+17;Oliver Gonzalez;1993-11-19;Philosophy;University of N
+18;Ethan Perez;1990-05-15;Environmental Science;College of O
+19;Harper Torres;1988-08-09;Medicine;Institute of P
+20;Evelyn Flores;1996-01-31;Architecture;School of Q
+21;Liam Rivera;1991-10-26;Linguistics;University of R
+22;Aria Brooks;1986-03-22;Dentistry;College of S
+23;Lucas Washington;1994-06-16;Criminal Justice;Institute of T
+24;Scarlett Evans;1987-09-04;Astronomy;School of U
+25;Aiden Collins;1990-04-01;Veterinary Science;University of V
+26;Grace Murphy;1993-12-28;Nursing;College of W
+27;Zoe Hill;1995-08-20;Social Work;Institute of X
+28;Jackson Turner;1989-01-13;Theater Arts;School of Y
+29;Charlotte Reed;1996-07-08;Communication Studies;University of Z
+30;Mateo Baker;1991-02-03;Religious Studies;College of AA
+31;Madison Cook;1988-10-27;Information Technology;Institute of AB
+32;Leo Nguyen;1994-05-21;Public Health;School of AC
+33;Luna Garcia;1990-12-16;Journalism;University of AD
+34;Avery Cooper;1987-03-10;Urban Planning;College of AE
+35;Sofia Gonzales;1992-09-04;Human Resources;Institute of AF
+36;Elijah Hughes;1995-04-30;Graphic Design;School of AG
+37;Elena King;1991-01-25;Culinary Arts;University of AH
+38;Carter Ward;1988-08-18;Fashion Design;College of AI
+39;Hannah Campbell;1996-06-12;Actuarial Science;Institute of AJ
+40;Muhammad Diaz;1993-11-06;Epidemiology;School of AK
+41;Aaliyah Perez;1990-05-31;Biomedical Engineering;University of AL
+42;Wyatt Foster;1989-02-24;Cybersecurity;College of AM
+43;Penelope Long;1994-10-19;Robotics;Institute of AN
+44;Gabriel Howard;1987-07-13;Neuroscience;School of AO
+45;Ellie Price;1992-04-08;Marine Biology;University of AP
+46;Aaron Ramirez;1995-12-03;Renewable Energy;College of AQ
+47;Violet Bell;1991-08-27;Industrial Engineering;Institute of AR
+48;Nicholas Coleman;1988-01-21;Forensic Science;School of AS
+49;Leah Bennett;1996-07-15;Supply Chain Management;University of AT
+50;Connor Gray;1990-02-09;Sports Management;College of AU
+51;Stella Butler;1989-11-04;International Relations;Institute of AV
+52;Gavin Perry;1994-06-28;Applied Mathematics;School of AW
+53;Maya Simmons;1987-03-23;Agricultural Science;University of AX
+54;Theodore Foster;1991-12-18;Physics;College of AY
+55;Aria Marshall;1995-09-11;Computer Science;Institute of AZ
+56;Eliana Dixon;1990-05-06;Chemical Engineering;School of BA
+57;Colton Hudson;1988-10-30;Biology;University of BB
+58;Aurora Barnes;1996-06-23;Medicine;College of BC
+59;Owen Cole;1993-01-17;Electrical Engineering;Institute of BD
+60;Isabelle Fisher;1991-09-10;Business Administration;School of BE
+61;Adeline Webb;1989-04-04;Psychology;University of BF
+62;Jaxon Chambers;1994-12-29;Environmental Science;College of BG
+63;Kylie Mendoza;1987-07-19;Architecture;Institute of BH
+64;Brayden Silva;1990-04-13;History;School of BI
+65;Valentina Hawkins;1996-01-06;Chemistry;University of BJ
+66;Tyler Gordon;1991-10-01;Political Science;College of BK
+67;Nova Hart;1988-02-24;English Literature;Institute of BL
+68;Maximus Fox;1995-11-18;Economics;School of BM
+69;Aubrey Montgomery;1992-08-13;Fine Arts;University of BN
+70;Riley Perry;1989-03-08;Geology;College of BO
+71;Isla Daniels;1994-12-02;Philosophy;Institute of BP
+72;Landon Patel;1987-06-27;Environmental Science;School of BQ
+73;Audrey Wallace;1990-01-21;Sociology;University of BR
+74;Emmett Buchanan;1996-09-14;Physics;College of BS
+75;Brooklyn Foster;1991-05-09;Chemical Engineering;Institute of BT
+76;Santiago Dunn;1988-12-04;Computer Science;School of BU
+77;Eliza Elliott;1993-08-28;Biology;University of BV
+78;Juliana Goodman;1987-04-22;Medicine;College of BW
+79;Dominic Sherman;1990-11-17;Electrical Engineering;Institute of BX
+80;Lydia Wallace;1995-06-11;Business Administration;School of BY
+81;Corbin Douglas;1992-03-05;Psychology;University of BZ
+82;Mackenzie Stevens;1989-10-29;Environmental Science;College of CA
+83;Paris Hunter;1994-07-23;History;Institute of CB
+84;Israel Thompson;1987-02-15;Chemistry;School of CC
+85;Emerson Johnston;1990-09-09;Political Science;University of CD
+86;Mila Palmer;1996-04-03;English Literature;College of CE
+87;Jasper Lawrence;1991-01-26;Economics;Institute of CF
+88;Annabelle Carter;1988-08-20;Fine Arts;School of CG
+89;Kaiden Barrett;1995-12-14;Geology;University of CH
+90;Gabriella Hughes;1992-07-09;Philosophy;College of CI
+91;Karter Wyatt;1989-04-03;Environmental Science;Institute of CJ
+92;Harlow Matthews;1994-12-28;Sociology;School of CK
+93;Rylan Richards;1987-07-22;Physics;University of CL
+94;Brielle Russell;1990-02-16;Chemical Engineering;College of CM
+95;Alina Brooks;1996-11-11;Computer Science;Institute of CN
+96;Quinn Coleman;1991-06-05;Biology;School of CO
+97;Sage Meyer;1988-01-30;Medicine;University of CP
+98;Waylon Henderson;1993-10-24;Electrical Engineering;College of CQ
+99;Camille Olson;1990-05-19;Business Administration;Institute of CR
+100;Kyrie Bass;1987-09-13;Psychology;School of CS
