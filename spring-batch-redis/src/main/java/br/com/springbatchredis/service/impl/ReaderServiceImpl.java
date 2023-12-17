@@ -35,7 +35,7 @@ public class ReaderServiceImpl implements ReaderService {
             if(!"id".equals(values[0])) {
                 ReaderCSVModel csvModel = ReaderCSVModel
                     .builder()
-                    .id(Integer.parseInt(values[0]))
+                    .id(values[0])
                     .name(values[1])
                     .dateOfBirthday(values[2])
                     .currentJob(values[3])
