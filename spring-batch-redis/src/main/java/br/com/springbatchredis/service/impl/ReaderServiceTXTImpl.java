@@ -3,6 +3,9 @@ package br.com.springbatchredis.service.impl;
 import br.com.springbatchredis.model.ReaderTXTModel;
 import br.com.springbatchredis.repository.ReaderTXTRepository;
 import br.com.springbatchredis.service.ReaderService;
+import com.google.gson.Gson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +17,8 @@ import java.util.List;
 
 @Service
 public class ReaderServiceTXTImpl extends ReaderService<ReaderTXTModel> {
+
+    Logger logger = LoggerFactory.getLogger(ReaderServiceTXTImpl.class);
 
     @Autowired
     ReaderTXTRepository txtRepository;
@@ -40,6 +45,7 @@ public class ReaderServiceTXTImpl extends ReaderService<ReaderTXTModel> {
                 txtRepository.save(txtModel);
             }
         }
+        logger.info("Read TXT File response: " + new Gson().toJson(lines));
         return lines;
     }
 }

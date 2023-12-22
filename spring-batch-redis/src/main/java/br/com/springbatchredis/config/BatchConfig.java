@@ -39,7 +39,7 @@ public class BatchConfig {
     @Autowired private JobBuilderFactory jobBuilderFactory;
     @Autowired private StepBuilderFactory stepBuilderFactory;
 
-    @Scheduled(fixedRate = 5000) //Execute job every 5 seconds
+//    @Scheduled(fixedRate = 5000) //Execute job every 5 seconds
     public void launchJob () throws Exception {
         logger.info("Batch processing starts at: " + LocalDateTime.now().toString());
         JobExecution jobExecution =
