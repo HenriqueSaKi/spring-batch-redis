@@ -1,16 +1,10 @@
 package br.com.springbatchredis.service;
 
-import br.com.springbatchredis.model.ReaderCSVModel;
-import br.com.springbatchredis.model.ReaderTXTModel;
-import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.util.List;
 
-public interface ReaderService {
+public abstract class ReaderService<T> {
 
-    List<ReaderCSVModel> readCSVFile() throws IOException;
-
-    List<ReaderTXTModel> readTXTFile() throws IOException;
+    public abstract List<T> readFile() throws IOException;
 
 }
