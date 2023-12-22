@@ -3,6 +3,9 @@ package br.com.springbatchredis.service.impl;
 import br.com.springbatchredis.model.ReaderCSVModel;
 import br.com.springbatchredis.repository.ReaderCSVRepository;
 import br.com.springbatchredis.service.ReaderService;
+import com.google.gson.Gson;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +17,8 @@ import java.util.List;
 
 @Service
 public class ReaderServiceCSVImpl extends ReaderService<ReaderCSVModel> {
+
+    Logger logger = LoggerFactory.getLogger(ReaderServiceCSVImpl.class);
 
     @Autowired
     ReaderCSVRepository csvRepository;
@@ -39,6 +44,7 @@ public class ReaderServiceCSVImpl extends ReaderService<ReaderCSVModel> {
                 csvRepository.save(csvModel);
             }
         }
+        logger.info("Read CSV File response: " + new Gson().toJson(lines));
         return lines;
     }
 }
