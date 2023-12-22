@@ -1,7 +1,6 @@
 package br.com.springbatchredis.config;
 
 import br.com.springbatchredis.model.ReaderCSVModel;
-import br.com.springbatchredis.service.ReaderService;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -29,9 +28,6 @@ public class BatchConfig {
 
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
-
-    @Autowired
-    private ReaderService service;
 
     @Bean
     public Job job(Step step) {
