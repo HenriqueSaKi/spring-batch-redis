@@ -40,11 +40,11 @@ public class ReaderController {
     public ResponseEntity<List<ReaderCSVModel>> readCSVFile () {
         try {
             List<ReaderCSVModel> response = csvService.readFile();
-            logger.info("CSV File read successfully at: " + LocalDateTime.now());
+            logger.info("CSV File read successfully at: {}", LocalDateTime.now());
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }
         catch (Exception e) {
-            logger.error("Failed to read file. Error: " + e.getMessage());
+            logger.error("Failed to read file. Error: {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }
@@ -58,11 +58,11 @@ public class ReaderController {
     public ResponseEntity<List<ReaderTXTModel>> readTXTFile () {
         try {
             List<ReaderTXTModel> response = txtService.readFile();
-            logger.info("TXT File read successfully at: " + LocalDateTime.now());
+            logger.info("TXT File read successfully at: {}", LocalDateTime.now());
             return ResponseEntity.status(HttpStatus.OK).body(response);
         }
         catch (Exception e) {
-            logger.error("Failed to read file. Error: " + e.getMessage());
+            logger.error("Failed to read file. Error: {}", e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
     }

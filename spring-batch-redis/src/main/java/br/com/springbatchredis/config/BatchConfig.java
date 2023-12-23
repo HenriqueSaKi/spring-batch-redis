@@ -3,7 +3,9 @@ package br.com.springbatchredis.config;
 import br.com.springbatchredis.model.ReaderCSVModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.batch.core.*;
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobParametersBuilder;
+import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -16,16 +18,15 @@ import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourc
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.logging.Level;
 
 @Configuration
 @EnableBatchProcessing
@@ -41,11 +42,11 @@ public class BatchConfig {
 
 //    @Scheduled(fixedRate = 5000) //Execute job every 5 seconds
     public void launchJob () throws Exception {
-        logger.info("Batch processing starts at: " + LocalDateTime.now().toString());
-        JobExecution jobExecution =
-                jobLauncher.run(job(jobRepository, transactionManager),
-                        new JobParametersBuilder().addDate("launchJob", new Date()).toJobParameters());
-        logger.info("Batch processing ends at: " + LocalDateTime.now().toString());
+        logger.info("Batch processing starts at: {}", LocalDateTime.now());
+        jobLauncher.run(job(jobRepository, transactionManager),
+                new JobParametersBuilder().addDate("launchJob", new Date())
+                        .toJobParameters());
+        logger.info("Batch processing ends at: {}", LocalDateTime.now());
     }
 
     @Bean

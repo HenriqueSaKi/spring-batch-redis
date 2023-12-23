@@ -13,10 +13,10 @@ import java.io.Serializable;
 public class ReaderTXTModel implements Serializable {
 
     @Id
-    public Integer id;
-    public String name;
-    public String birthday;
-    public String graduation;
-    public String university;
+    private Integer id;
+    private String name;
+    private String birthday;
+    private String graduation;
+    private String university;
 
 }

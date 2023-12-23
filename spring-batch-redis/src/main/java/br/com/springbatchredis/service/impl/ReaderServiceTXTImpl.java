@@ -26,26 +26,34 @@ public class ReaderServiceTXTImpl extends ReaderService<ReaderTXTModel> {
     @Override
     public List<ReaderTXTModel> readFile() throws IOException {
         FileReader in = new FileReader("src/main/resources/dataset/100-random-datas.txt");
-        BufferedReader reader = new BufferedReader(in);
 
         List<ReaderTXTModel> lines = new ArrayList<>();
         String line;
-        while((line = reader.readLine()) != null) {
-            String[] values = line.split(";");
-            if(!"id".equals(values[0])) {
-                ReaderTXTModel txtModel = ReaderTXTModel
-                        .builder()
-                        .id(Integer.parseInt(values[0]))
-                        .name(values[1])
-                        .birthday(values[2])
-                        .graduation(values[3])
-                        .university(values[4])
-                        .build();
-                lines.add(txtModel);
-                txtRepository.save(txtModel);
+
+
+        try (BufferedReader reader = new BufferedReader(in)) {
+            while((line = reader.readLine()) != null) {
+                String[] values = line.split(";");
+                if(!"id".equals(values[0])) {
+                    ReaderTXTModel txtModel = ReaderTXTModel
+                            .builder()
+                            .id(Integer.parseInt(values[0]))
+                            .name(values[1])
+                            .birthday(values[2])
+                            .graduation(values[3])
+                            .university(values[4])
+                            .build();
+                    lines.add(txtModel);
+                    txtRepository.save(txtModel);
+                }
             }
+            logger.info("Read TXT File response: {}", new Gson().toJson(lines));
+            return lines;
         }
-        logger.info("Read TXT File response: " + new Gson().toJson(lines));
-        return lines;
+        catch (Exception e) {
+            logger.error("Failed response. Caused by: {}", e.getMessage());
+        }
+        return new ArrayList<>();
+
     }
 }

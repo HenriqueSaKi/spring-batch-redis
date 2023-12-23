@@ -17,9 +17,9 @@ import java.io.Serializable;
 public class ReaderCSVModel implements Serializable {
 
     @Id
-    public String id;
-    public String name;
-    public String dateOfBirthday;
-    public String currentJob;
+    private String id;
+    private String name;
+    private String dateOfBirthday;
+    private String currentJob;
 
 }

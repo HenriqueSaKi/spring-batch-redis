@@ -26,25 +26,32 @@ public class ReaderServiceCSVImpl extends ReaderService<ReaderCSVModel> {
     @Override
     public List<ReaderCSVModel> readFile() throws IOException {
         FileReader in = new FileReader("src/main/resources/dataset/100-random-datas.csv");
-        BufferedReader reader = new BufferedReader(in);
 
         List<ReaderCSVModel> lines = new ArrayList<>();
         String line;
-        while((line = reader.readLine()) != null) {
-            String[] values = line.split(";");
-            if(!"id".equals(values[0])) {
-                ReaderCSVModel csvModel = ReaderCSVModel
-                        .builder()
-                        .id(values[0])
-                        .name(values[1])
-                        .dateOfBirthday(values[2])
-                        .currentJob(values[3])
-                        .build();
-                lines.add(csvModel);
-                csvRepository.save(csvModel);
+        try (BufferedReader reader = new BufferedReader(in)){
+            while((line = reader.readLine()) != null) {
+                String[] values = line.split(";");
+                if(!"id".equals(values[0])) {
+                    ReaderCSVModel csvModel = ReaderCSVModel
+                            .builder()
+                            .id(values[0])
+                            .name(values[1])
+                            .dateOfBirthday(values[2])
+                            .currentJob(values[3])
+                            .build();
+                    lines.add(csvModel);
+                    csvRepository.save(csvModel);
+                }
             }
+            logger.info("Read CSV File response: {}", new Gson().toJson(lines));
+            return lines;
         }
-        logger.info("Read CSV File response: " + new Gson().toJson(lines));
-        return lines;
+        catch (Exception e) {
+            logger.error("Failed response. Caused by: {}", e.getMessage());
+        }
+
+        return new ArrayList<>();
+
     }
 }
