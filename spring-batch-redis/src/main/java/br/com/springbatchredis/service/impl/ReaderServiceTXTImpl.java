@@ -20,8 +20,8 @@ public class ReaderServiceTXTImpl extends ReaderService<ReaderTXTModel> {
 
     Logger logger = LoggerFactory.getLogger(ReaderServiceTXTImpl.class);
 
-    @Autowired
-    ReaderTXTRepository txtRepository;
+//    @Autowired
+//    ReaderTXTRepository txtRepository;
 
     @Override
     public List<ReaderTXTModel> readFile() throws IOException {
@@ -44,7 +44,7 @@ public class ReaderServiceTXTImpl extends ReaderService<ReaderTXTModel> {
                             .university(values[4])
                             .build();
                     lines.add(txtModel);
-                    txtRepository.save(txtModel);
+//                    txtRepository.save(txtModel);
                 }
             }
             logger.info("Read TXT File response: {}", new Gson().toJson(lines));

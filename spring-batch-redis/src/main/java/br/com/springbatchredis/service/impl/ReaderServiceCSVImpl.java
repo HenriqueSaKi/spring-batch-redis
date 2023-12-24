@@ -20,8 +20,8 @@ public class ReaderServiceCSVImpl extends ReaderService<ReaderCSVModel> {
 
     Logger logger = LoggerFactory.getLogger(ReaderServiceCSVImpl.class);
 
-    @Autowired
-    ReaderCSVRepository csvRepository;
+//    @Autowired
+//    ReaderCSVRepository csvRepository;
 
     @Override
     public List<ReaderCSVModel> readFile() throws IOException {
@@ -41,13 +41,13 @@ public class ReaderServiceCSVImpl extends ReaderService<ReaderCSVModel> {
                             .currentJob(values[3])
                             .build();
                     lines.add(csvModel);
-                    csvRepository.save(csvModel);
+//                    csvRepository.save(csvModel);
                 }
             }
             logger.info("Read CSV File response: {}", new Gson().toJson(lines));
             return lines;
         }
-        catch (Exception e) {
+        catch (IOException e) {
             logger.error("Failed response. Caused by: {}", e.getMessage());
         }
 

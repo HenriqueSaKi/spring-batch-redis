@@ -1,4 +1,3 @@
-id;name;birthday;graduation;university
 1;Emily Johnson;1989-07-20;Computer Science;University of X
 2;Daniel Williams;1994-04-12;Engineering;College of Y
 3;Olivia Brown;1990-11-30;Biology;Institute of Z
