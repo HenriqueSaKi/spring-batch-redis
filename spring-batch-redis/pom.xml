@@ -12,9 +12,12 @@
 	<artifactId>spring-batch-redis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-batch-redis</name>
-	<description>Project to save data from CSV file into Redis cache and store these datas into SQL Server using Spring Batch</description>
+	<description>Service to read file and store data into redis or SQL Server + Batch</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.exclusions>
+			**/br/com/springbatchredis/config/*.*
+		</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -80,6 +83,32 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.7.0.1746</version>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<phase>test-compile</phase>
+					</execution>
+					<execution>
+						<id>report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
