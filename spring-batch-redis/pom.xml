@@ -15,6 +15,9 @@
 	<description>Service to read file and store data into redis or SQL Server + Batch</description>
 	<properties>
 		<java.version>11</java.version>
+		<sonar.exclusions>
+			**/br/com/springbatchredis/config/*.*
+		</sonar.exclusions>
 	</properties>
 	<dependencies>
 		<dependency>

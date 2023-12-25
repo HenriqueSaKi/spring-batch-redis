@@ -26,7 +26,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
 import java.time.LocalDateTime;
 import java.util.Date;
-import java.util.logging.Level;
 
 @Configuration
 @EnableBatchProcessing
